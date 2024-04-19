@@ -39,6 +39,6 @@ class MainActivity : AppCompatActivity() {
             Theme.isMaterial3Enabled = !Theme.isMaterial3Enabled
             recreate()
         }
-//        findViewById<MaterialSwitchBar>(R.id.switch_bar).text = "Test"
+//        findViewByterialSwitchBar>(R.id.switch_bar).text = "Test"
     }
 }
