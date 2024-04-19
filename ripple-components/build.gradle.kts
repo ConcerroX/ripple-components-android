@@ -28,6 +28,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 publishing {
@@ -79,4 +82,6 @@ publishing {
 dependencies {
     //noinspection UseTomlInstead
     implementation("com.google.android.material:material:1.11.0")
+    //noinspection UseTomlInstead
+    implementation("io.arrow-kt:arrow-core:1.2.1")
 }
