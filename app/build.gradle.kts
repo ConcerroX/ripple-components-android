@@ -6,14 +6,12 @@ plugins {
 android {
     namespace = "concerrox.ripple.catalog"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "concerrox.ripple.catalog"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -33,10 +31,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
+    implementation(project(":ripple-components"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

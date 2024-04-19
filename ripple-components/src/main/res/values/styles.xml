@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Preference.SimpleMenuPreference.PopupMenu" parent="android:Widget">
+        <item name="android:popupBackground">@drawable/simple_menu_background</item>
+        <item name="listMarginHorizontal">@dimen/simple_menu_margin</item>
+        <item name="listMarginVertical">8dp</item>
+        <item name="listItemPadding">16dp</item>
+        <item name="menuElevation">8dp</item>
+
+        <item name="increment">@dimen/simple_menu_unit</item>
+        <item name="maxIncrements">@integer/simple_menu_max_units</item>
+    </style>
+
+    <style name="ThemeOverlay.Preference.SimpleMenuPreference.PopupMenu" parent="android:ThemeOverlay">
+        <item name="popupBackgroundRadius">4dp</item>
+    </style>
+
+    <style name="Animation.Preference.SimpleMenuCenter" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+</resources>
