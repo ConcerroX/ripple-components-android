@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Widget.Preference.SimpleMenuPreference.PopupMenu" parent="android:Widget">
         <item name="android:popupBackground">@drawable/simple_menu_background</item>
         <item name="listMarginHorizontal">@dimen/simple_menu_margin</item>
@@ -19,4 +20,31 @@
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
     </style>
+
+
+    <style name="Widget.Ripple.Material3.SwitchBar" parent="android:Widget">
+        <item name="shapeAppearance">?shapeAppearanceCornerExtraLarge</item>
+        <item name="backgroundTint">@color/material_switch_bar_background_m3</item>
+        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
+        <item name="circleRevealEnabled">false</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="Widget.Ripple.Material2.SwitchBar" parent="android:Widget">
+        <item name="shapeAppearance">@null</item>
+        <item name="backgroundTint">@color/material_switch_bar_background_m2</item>
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+        <item name="circleRevealEnabled">false</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+<!--    <style name="Widget.Ripple.Material2.SwitchBar.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">-->
+<!--        <item name="trackTint">@color/material_switch_bar_switch_track_tint_m2</item>-->
+<!--    </style>-->
 </resources>

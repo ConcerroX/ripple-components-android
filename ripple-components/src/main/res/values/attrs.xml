@@ -2,6 +2,8 @@
 <resources>
     <declare-styleable name="Theme">
         <attr name="simpleMenuPreferenceStyle" format="reference" />
+
+        <attr name="materialSwitchBarStyle" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="ForegroundCheckTextView">
@@ -23,5 +25,17 @@
         <attr name="menuElevation" format="dimension" />
         <attr name="increment" format="dimension" />
         <attr name="maxIncrements" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialSwitchBar">
+        <attr name="android:textAppearance" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingBottom" />
+        <attr name="android:paddingStart" />
+        <attr name="android:paddingEnd" />
+        <attr name="shapeAppearance" />
+        <attr name="backgroundTint" format="color" />
+        <attr name="circleRevealEnabled" format="boolean" />
     </declare-styleable>
 </resources>

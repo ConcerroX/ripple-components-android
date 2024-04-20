@@ -2,6 +2,7 @@ package concerrox.ripple.menu
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Outline
 import android.graphics.Paint
 import android.graphics.Rect
@@ -17,13 +18,17 @@ import android.widget.TextView
 import androidx.annotation.RestrictTo
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.color.MaterialColors
+import com.google.android.material.shape.MaterialShapeDrawable
+import concerrox.ripple.Material
 import concerrox.ripple.internal.xInWindow
 import concerrox.ripple.R
+import concerrox.ripple.internal.ResourcesUtils
 import kotlin.math.roundToInt
 
 @SuppressLint("ResourceType")
 @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-open class SimpleMenuPopupWindow @JvmOverloads constructor(
+class SimpleMenuPopupWindow @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.styleable.SimpleMenuPreference_android_popupMenuStyle,
@@ -90,6 +95,37 @@ open class SimpleMenuPopupWindow @JvmOverloads constructor(
         }
         recyclerView = contentView
 
+        if (Material.isMaterial3Enabled(context)) {
+            setBackgroundDrawable(CustomBoundsDrawable(
+                MaterialShapeDrawable(
+                    ResourcesUtils.getShapeAppearanceModelFromAttribute(
+                        context, com.google.android.material.R.attr.shapeAppearanceCornerSmall
+                    )
+                ).apply {
+                    fillColor = ColorStateList.valueOf(
+                        MaterialColors.getColorOrNull(
+                            context,
+                            com.google.android.material.R.attr.colorSurfaceContainer
+                        )!!
+                    )
+                }
+            ))
+        } else {
+            setBackgroundDrawable(CustomBoundsDrawable(
+                MaterialShapeDrawable(
+                    ResourcesUtils.getShapeAppearanceModelFromAttribute(
+                        context, com.google.android.material.R.attr.shapeAppearanceSmallComponent
+                    )
+                ).apply {
+                    fillColor = ColorStateList.valueOf(
+                        MaterialColors.getColorOrNull(
+                            context,
+                            com.google.android.material.R.attr.colorSurface
+                        )!!
+                    )
+                }
+            ))
+        }
 
         // TODO do not hardcode
         itemHeight = (context.resources.displayMetrics.density * 48).roundToInt()

@@ -18,7 +18,8 @@
     <concerrox.ripple.switches.MaterialSwitchBar
         android:id="@+id/switch_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"/>
 
     <concerrox.ripple.spinner.MaterialSpinner
         android:id="@+id/spinner"

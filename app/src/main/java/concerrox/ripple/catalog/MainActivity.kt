@@ -5,10 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.button.MaterialButton
 import concerrox.ripple.catalog.databinding.ActivityMainBinding
-import concerrox.ripple.spinner.MaterialSpinner
-import concerrox.ripple.switches.MaterialSwitchBar
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,19 +23,20 @@ class MainActivity : AppCompatActivity() {
                 com.google.android.material.R.style.Theme_MaterialComponents_DayNight
             }
         )
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        findViewById<MaterialSpinner>(R.id.spinner).entries =
+        binding.spinner.entries =
             listOf("Apple", "Banana", "Pear", "Grape")
-        findViewById<MaterialButton>(R.id.theme_button).setOnClickListener {
+        binding.themeButton.setOnClickListener {
             Theme.isMaterial3Enabled = !Theme.isMaterial3Enabled
             recreate()
         }
-//        findViewByterialSwitchBar>(R.id.switch_bar).text = "Test"
+        binding.switchBar.text = "Test"
     }
 }

@@ -11,9 +11,15 @@ object ResourcesUtils {
         return themedValue.resourceId
     }
 
-    fun getShapeAppearanceModel(context: Context, defResAttr: Int): ShapeAppearanceModel {
+    fun getShapeAppearanceModelFromAttribute(context: Context, defResAttr: Int): ShapeAppearanceModel {
         return ShapeAppearanceModel.builder(
             context, getResourceId(context, defResAttr), 0
+        ).build()
+    }
+
+    fun getShapeAppearanceModelResource(context: Context, defStyleRes: Int): ShapeAppearanceModel {
+        return ShapeAppearanceModel.builder(
+            context, defStyleRes, 0
         ).build()
     }
 }

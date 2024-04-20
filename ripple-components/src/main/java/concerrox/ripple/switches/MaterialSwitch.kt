@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import android.widget.Checkable
 import android.widget.CompoundButton
@@ -12,6 +13,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.Px
 import androidx.appcompat.widget.SwitchCompat
 import com.google.android.material.materialswitch.MaterialSwitch
+import com.google.android.material.slider.Slider
 import com.google.android.material.switchmaterial.SwitchMaterial
 import concerrox.ripple.Material
 
@@ -156,4 +158,18 @@ class MaterialSwitch @JvmOverloads constructor(
     fun setOnCheckedChangeListener(listener: CompoundButton.OnCheckedChangeListener) {
         realSwitch.setOnCheckedChangeListener(listener)
     }
+
+    override fun setBackground(background: Drawable?) {
+        realSwitch.background = background
+    }
+
+    override fun getBackground(): Drawable {
+        return realSwitch.background
+    }
+
+    var haloDrawable: RippleDrawable?
+        set(value) {
+            realSwitch.background = value
+        }
+        get() = realSwitch.background as RippleDrawable
 }
