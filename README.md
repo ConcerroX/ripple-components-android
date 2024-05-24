@@ -1,0 +1,68 @@
+## Features
+- [ ] Menus
+  - [x] Simple menus
+  - [ ] Popup menus
+  - [ ] Context menus
+  - [ ] Drop-down menus
+- [x] Spinners
+- [ ] Search
+  - [ ] M2 styles
+  - [ ] M1 styles
+- [ ] Side sheets
+- [ ] Lists
+- [ ] Grid lists
+- [ ] Dialogs
+  - [ ] Full screen dialogs
+  - [ ] Permission dialogs
+  - [ ] Simple dialogs
+  - [ ] New M2 dialogs
+  - [ ] Profile panel dialogs
+- [ ] Chips
+  - [ ] Fix missing attributes
+  - [ ] Outlined styles
+- [ ] Buttons
+  - [ ] Fix missing attribute of text button
+  - [ ] Hero buttons
+  - [ ] Icon buttons
+  - [ ] Drop-down buttons
+  - [ ] Toggle buttons
+- [ ] Progress indicators
+  - [ ] Buffer styles
+- [ ] Sliders
+  - [ ] Squiggle styles
+- [ ] Data visualizations
+- [ ] Code scanner
+- [ ] Backdrop
+- [ ] Expansion panels
+- [x] Switch bars
+- [ ] Toast
+- [ ] Top app bars
+  - [ ] Subtitled collapsing app bars
+  - [ ] Fix icon margins
+  - [ ] Shrinkable top app bars
+  - [ ] Action modes
+  - [ ] Sticky top app bars
+- [ ] Datetime Pickers
+- [ ] Tooltips
+  - [ ] Rich tooltips
+  - [ ] Key tooltips
+  - [ ] Interactive tooltips
+- [ ] Floating action buttons
+  - [ ] FAB dials
+  - [ ] FAB menus
+- [ ] Fast scrollbars
+- [ ] Edge effects
+- [ ] Switches
+- [ ] Introductions
+- [ ] Pagination
+- [ ] Number pickers
+- [ ] Steppers
+- [ ] Swipe-able
+- [ ] Skeletons
+- [x] Avatars
+- [ ] Banners
+- [ ] Tabs
+  - [ ] Vertical tabs 
+- [ ] Information tips
+- [ ] Drag-and-drop
+- [x] Feature discovery

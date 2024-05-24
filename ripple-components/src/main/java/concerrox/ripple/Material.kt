@@ -7,6 +7,9 @@ import com.google.android.material.R
 import com.google.android.material.color.MaterialColors
 
 class Material {
+
+//    public isMaterial3Enabled
+
     companion object {
         private const val INVALID_COLOR = Int.MIN_VALUE
 
@@ -30,5 +33,6 @@ class Material {
         private fun getAttrColor(context: Context, @AttrRes attrResId: Int) =
             MaterialColors.getColor(context, attrResId, INVALID_COLOR)
 
+//        private val DESIGN_SYSTEM
     }
 }

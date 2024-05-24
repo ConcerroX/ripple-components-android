@@ -23,6 +23,7 @@ import com.google.android.material.shape.MaterialShapeDrawable
 import concerrox.ripple.Material
 import concerrox.ripple.internal.xInWindow
 import concerrox.ripple.R
+import concerrox.ripple.drawable.BoundedDrawable
 import concerrox.ripple.internal.ResourcesUtils
 import kotlin.math.roundToInt
 
@@ -96,35 +97,30 @@ class SimpleMenuPopupWindow @JvmOverloads constructor(
         recyclerView = contentView
 
         if (Material.isMaterial3Enabled(context)) {
-            setBackgroundDrawable(CustomBoundsDrawable(
-                MaterialShapeDrawable(
-                    ResourcesUtils.getShapeAppearanceModelFromAttribute(
-                        context, com.google.android.material.R.attr.shapeAppearanceCornerSmall
-                    )
-                ).apply {
-                    fillColor = ColorStateList.valueOf(
-                        MaterialColors.getColorOrNull(
-                            context,
-                            com.google.android.material.R.attr.colorSurfaceContainer
-                        )!!
-                    )
-                }
-            ))
+            setBackgroundDrawable(BoundedDrawable(MaterialShapeDrawable(
+                ResourcesUtils.getShapeAppearanceModelFromAttr(
+                    context, com.google.android.material.R.attr.shapeAppearanceCornerSmall
+                )
+            ).apply {
+                fillColor = ColorStateList.valueOf(
+                    MaterialColors.getColorOrNull(
+                        context, com.google.android.material.R.attr.colorSurfaceContainer
+                    )!!
+                )
+            }))
         } else {
-            setBackgroundDrawable(CustomBoundsDrawable(
-                MaterialShapeDrawable(
-                    ResourcesUtils.getShapeAppearanceModelFromAttribute(
-                        context, com.google.android.material.R.attr.shapeAppearanceSmallComponent
-                    )
-                ).apply {
-                    fillColor = ColorStateList.valueOf(
-                        MaterialColors.getColorOrNull(
-                            context,
-                            com.google.android.material.R.attr.colorSurface
-                        )!!
-                    )
-                }
-            ))
+            setBackgroundDrawable(BoundedDrawable(MaterialShapeDrawable(
+                ResourcesUtils.getShapeAppearanceModelFromAttr(
+                    context,
+                    com.google.android.material.R.attr.shapeAppearanceSmallComponent
+                )
+            ).apply {
+                fillColor = ColorStateList.valueOf(
+                    MaterialColors.getColorOrNull(
+                        context, com.google.android.material.R.attr.colorSurface
+                    )!!
+                )
+            }))
         }
 
         // TODO do not hardcode
@@ -136,18 +132,18 @@ class SimpleMenuPopupWindow @JvmOverloads constructor(
         return super.getContentView() as RecyclerView
     }
 
-    override fun getBackground(): CustomBoundsDrawable {
+    override fun getBackground(): BoundedDrawable {
         val background = super.getBackground()
-        if (background != null && background !is CustomBoundsDrawable) {
+        if (background != null && background !is BoundedDrawable) {
             setBackgroundDrawable(background)
         }
-        return super.getBackground() as CustomBoundsDrawable
+        return super.getBackground() as BoundedDrawable
     }
 
     override fun setBackgroundDrawable(background: Drawable) {
         var boundedBackground = background
-        if (boundedBackground !is CustomBoundsDrawable) {
-            boundedBackground = CustomBoundsDrawable(boundedBackground)
+        if (boundedBackground !is BoundedDrawable) {
+            boundedBackground = BoundedDrawable(boundedBackground)
         }
         super.setBackgroundDrawable(boundedBackground)
     }
@@ -174,7 +170,7 @@ class SimpleMenuPopupWindow @JvmOverloads constructor(
 
         // clear last bounds
         val zeroRect = Rect()
-        background.setCustomBounds(zeroRect)
+        background.drawableBounds = zeroRect
         contentView.invalidateOutline()
         showPopupMenu(anchor, container, mMeasuredWidth, extraMargin)
 //            if (SimpleMenuPreference.isLightFixEnabled()) {

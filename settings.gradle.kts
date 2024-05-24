@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "Ripple Components Catalog"
 include(":app")
 include(":ripple-components")
+//include(":catalog")

@@ -1,4 +1,4 @@
-package concerrox.ripple.menu
+package concerrox.ripple.drawable
 
 import android.content.res.ColorStateList
 import android.graphics.*

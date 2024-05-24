@@ -55,11 +55,11 @@ class MaterialSpinner @JvmOverloads constructor(
         isClickable = true
         background = MaterialShapeDrawable(
             if (Material.isMaterial3Enabled(context)) {
-                ResourcesUtils.getShapeAppearanceModelFromAttribute(
+                ResourcesUtils.getShapeAppearanceModelFromAttr(
                     context, com.google.android.material.R.attr.shapeAppearanceCornerExtraSmall
                 )
             } else {
-                ResourcesUtils.getShapeAppearanceModelFromAttribute(
+                ResourcesUtils.getShapeAppearanceModelFromAttr(
                     context, com.google.android.material.R.attr.shapeAppearanceSmallComponent
                 )
             }

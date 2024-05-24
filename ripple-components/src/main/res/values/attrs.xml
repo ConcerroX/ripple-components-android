@@ -4,6 +4,9 @@
         <attr name="simpleMenuPreferenceStyle" format="reference" />
 
         <attr name="materialSwitchBarStyle" format="reference" />
+        <attr name="avatarImageViewStyle" format="reference" />
+        <attr name="listItemStyle" format="reference" />
+        <attr name="materialTooltipStyle" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="ForegroundCheckTextView">
@@ -37,5 +40,68 @@
         <attr name="shapeAppearance" />
         <attr name="backgroundTint" format="color" />
         <attr name="circleRevealEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageView">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="shapeAppearance" />
+    </declare-styleable>
+
+    <declare-styleable name="ListItem">
+        <attr name="android:paddingStart" />
+        <attr name="android:paddingEnd" />
+
+        <attr name="elevation" />
+        <attr name="background" />
+        <attr name="shapeAppearance" />
+
+        <attr name="itemHeight" format="dimension" />
+        <attr name="forceKeyline" format="boolean" />
+        <attr name="keyline" format="dimension" />
+
+        <attr name="title" format="string" />
+        <attr name="text" format="string" />
+        <attr name="meta" format="string" />
+        <attr name="overline" format="string" />
+
+        <attr name="overlineTextAppearance" format="reference" />
+        <attr name="primaryTextAppearance" format="reference" />
+        <attr name="secondaryTextAppearance" format="reference" />
+
+        <attr name="oneLineItemHeight" format="dimension" />
+
+        <attr name="twoLineItemHeight" format="dimension" />
+        <attr name="twoLineOverlineTextBaselineToTopHeight" format="dimension" />
+        <attr name="twoLinePrimaryTextBaselineToTopHeight" format="dimension" />
+        <attr name="twoLinePrimaryTextBaselineToOverlineTextBaselineHeight" format="dimension" />
+        <attr name="twoLineSecondaryTextBaselineToPrimaryTextBaselineHeight" format="dimension" />
+        <attr name="twoLineCenterAligned" format="boolean" />
+
+        <attr name="threeLineItemHeight" format="dimension" />
+        <attr name="threeLineOverlineTextBaselineToTopHeight" format="dimension" />
+        <attr name="threeLinePrimaryTextBaselineToTopHeight" format="dimension" />
+        <attr name="threeLinePrimaryTextBaselineToOverlineTextBaselineHeight" format="dimension" />
+        <attr name="threeLineSecondaryTextBaselineToPrimaryTextBaselineHeight" format="dimension" />
+        <attr name="threeLineCenterAligned" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ListItemGroup">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialTooltipView">
+        <attr name="tooltipMargin" format="dimension|reference" />
+        <attr name="tooltipPaddingHorizontal" format="dimension|reference" />
+        <attr name="tooltipPaddingVertical" format="dimension|reference" />
+        <attr name="tooltipTextColor" format="color|reference" />
+        <attr name="tooltipTextAppearance" format="reference" />
+        <attr name="backgroundColor" />
+        <attr name="shapeAppearance" />
+        <attr name="android:maxLines" />
+        <attr name="android:ellipsize" />
+        <attr name="android:maxWidth" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
     </declare-styleable>
 </resources>

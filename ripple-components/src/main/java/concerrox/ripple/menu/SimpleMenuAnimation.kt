@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import concerrox.ripple.drawable.BoundedDrawable
 import kotlin.math.abs
 
 /**
@@ -14,7 +15,7 @@ import kotlin.math.abs
  */
 internal object SimpleMenuAnimation {
     fun startEnterAnimation(
-        background: CustomBoundsDrawable?,
+        background: BoundedDrawable?,
         view: View,
         width: Int,
         height: Int,

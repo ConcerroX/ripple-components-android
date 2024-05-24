@@ -1,8 +1,7 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
     id("maven-publish")
-//    id("signing")
+    alias(libs.plugins.kotlin)
 }
 
 android {
@@ -85,3 +84,4 @@ dependencies {
     //noinspection UseTomlInstead
     implementation("io.arrow-kt:arrow-core:1.2.1")
 }
+
