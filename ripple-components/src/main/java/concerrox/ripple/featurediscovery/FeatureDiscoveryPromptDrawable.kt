@@ -1,6 +1,5 @@
 package concerrox.ripple.featurediscovery
 
-import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import android.graphics.Canvas
 import android.graphics.ColorFilter

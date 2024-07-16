@@ -14,6 +14,7 @@ import com.google.android.material.shape.ShapeAppearancePathProvider
 import concerrox.ripple.drawable.DrawableWrapper
 import concerrox.ripple.internal.dp
 
+@Deprecated("")
 class AvatarDrawable(
     private val avatarImageView: AvatarImageView, wrappedDrawable: Drawable
 ) : DrawableWrapper(wrappedDrawable) {

@@ -1,8 +1,6 @@
 package concerrox.ripple.tooltip
 
 import android.view.View
-import androidx.appcompat.widget.TooltipCompat
-import androidx.constraintlayout.solver.widgets.ConstraintAnchor
 
 class MaterialTooltip(private val anchor: View, private val text: CharSequence? = null) {
 

@@ -19,7 +19,6 @@ import concerrox.ripple.internal.pow
 import concerrox.ripple.internal.setTextAppearanceFromAttr
 import concerrox.ripple.internal.xInWindow
 import concerrox.ripple.internal.yInWindow
-import java.lang.Float.min
 import kotlin.math.sqrt
 
 internal class FeatureDiscoveryPromptView @JvmOverloads constructor(

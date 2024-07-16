@@ -55,9 +55,64 @@
         <item name="shapeAppearance">@style/ShapeAppearance.Ripple.Material2.FullComponent</item>
     </style>
 
+    <style name="Widget.Ripple.Material2.MaterialTooltip" parent="android:Widget" >
+        <item name="tooltipMargin">8dp</item>
+        <item name="tooltipPaddingHorizontal">16dp</item>
+        <item name="tooltipPaddingVertical">8dp</item>
+<!--        <item name="tooltipTextColor">?attr/tooltipForegroundColor</item>-->
+        <item name="tooltipTextAppearance">@style/TextAppearance.MaterialComponents.Tooltip</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Tooltip</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+<!--        <item name="android:maxWidth">256dp</item>-->
+<!--        <item name="android:minWidth">32dp</item>-->
+<!--        <item name="android:minHeight">32dp</item>-->
+    </style>
+
+    <!--    <style name="Widget.Ripple.Material2.SwitchBar.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">-->
+    <!--        <item name="trackTint">@color/material_switch_bar_switch_track_tint_m2</item>-->
+    <!--    </style>-->
+
+    <!-- concerrox.android.ui.ripple -->
+    <style name="Widget.Ripple.Material2.TipView.Information" parent="android:Widget">
+        <item name="backgroundTint">@color/ripple_tip_view_background_m2</item>
+        <item name="titleTextColor">?colorPrimary</item>
+        <item name="textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+        <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <style name="Widget.Ripple.Material2.ListItem" parent="android:Widget">
         <item name="android:paddingStart">16dp</item>
         <item name="android:paddingEnd">16dp</item>
+
+        <item name="keyline">72dp</item>
+
         <item name="primaryTextAppearance">?textAppearanceSubtitle1</item>
         <item name="secondaryTextAppearance">?textAppearanceBody2</item>
 
@@ -74,28 +129,8 @@
         <item name="threeLineCenterAligned">false</item>
     </style>
 
-    <style name="Widget.Ripple.Material2.MaterialTooltip" parent="android:Widget" >
-        <item name="tooltipMargin">8dp</item>
-        <item name="tooltipPaddingHorizontal">16dp</item>
-        <item name="tooltipPaddingVertical">8dp</item>
-<!--        <item name="tooltipTextColor">?attr/tooltipForegroundColor</item>-->
-        <item name="tooltipTextAppearance">@style/TextAppearance.MaterialComponents.Tooltip</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Tooltip</item>
-        <item name="android:maxLines">3</item>
-        <item name="android:ellipsize">end</item>
-<!--        <item name="android:maxWidth">256dp</item>-->
-<!--        <item name="android:minWidth">32dp</item>-->
-<!--        <item name="android:minHeight">32dp</item>-->
+    <style name="Widget.Ripple.Material2.IconListItem" parent="Widget.Ripple.Material2.ListItem">
+        <item name="forceKeyline">true</item>
     </style>
 
-
-    <style name="Theme.Ripple.Material2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="avatarImageViewStyle">@style/Widget.Ripple.Material2.AvatarImageView.Circle
-        </item>
-        <item name="listItemStyle">@style/Widget.Ripple.Material2.ListItem</item>
-    </style>
-
-    <!--    <style name="Widget.Ripple.Material2.SwitchBar.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">-->
-    <!--        <item name="trackTint">@color/material_switch_bar_switch_track_tint_m2</item>-->
-    <!--    </style>-->
 </resources>

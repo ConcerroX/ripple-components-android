@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "concerrox.ripple"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         minSdk = 21
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -36,7 +36,7 @@ publishing {
     publications {
         register<MavenPublication>("main") {
             groupId = "io.github.concerrox"
-            artifactId = "ripple"
+            artifactId = "ui.ripple"
             version = "1.0.0-SNAPSHOT"
             afterEvaluate {
                 artifact(tasks.getByName("bundleReleaseAar"))
@@ -46,7 +46,7 @@ publishing {
 //                description = ""
 //                url = "https://github.com/ConcerroX/ripple-components-android"
 //                inceptionYear = "2024"
-////                artifact("$buildDir/outputs/aar/ripple-components-release.aar")
+////                artifact("$buildDir/outputs/aar/ui.ripple-components-release.aar")
 //                scm {
 //                    url = "https://github.com/ConcerroX/ripple-components-android"
 //                    connection =

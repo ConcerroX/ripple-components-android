@@ -13,11 +13,10 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.Px
 import androidx.appcompat.widget.SwitchCompat
 import com.google.android.material.materialswitch.MaterialSwitch
-import com.google.android.material.slider.Slider
 import com.google.android.material.switchmaterial.SwitchMaterial
 import concerrox.ripple.Material
 
-class MaterialSwitch @JvmOverloads constructor(
+open class MaterialSwitch @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr), Checkable {
 

@@ -1,20 +1,18 @@
 package concerrox.ripple.catalog
 
-import android.content.Context
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewbinding.ViewBinding
 import androidx.viewpager.widget.PagerAdapter
-import kotlin.reflect.KClass
+import concerrox.ripple.catalog.ui.Page
 
-class MainPagerAdapter(context: Context, private val list: List<Pair<String, ViewBinding>>): PagerAdapter() {
+class MainPagerAdapter(private val list: List<Page>): PagerAdapter() {
 
     private val views = ArrayList<View>()
 
     init {
         list.forEach {
-            views.add(it.second.root)
+            views.add(it.binding.root)
+            it.onViewCreated()
         }
     }
     override fun getCount(): Int {
@@ -26,7 +24,7 @@ class MainPagerAdapter(context: Context, private val list: List<Pair<String, Vie
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        return list[position].first
+        return list[position].name
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {

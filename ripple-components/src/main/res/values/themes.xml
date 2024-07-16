@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.Ripple.Material2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/ripple_background_light</item>
+        <item name="android:windowBackground">@color/ripple_background_light</item>
 
+        <item name="listItemStyle">@style/Widget.Ripple.Material2.ListItem</item>
+        <item name="iconListItemStyle">@style/Widget.Ripple.Material2.IconListItem</item>
+    </style>
 </resources>

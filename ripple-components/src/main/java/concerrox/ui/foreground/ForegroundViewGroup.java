@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package concerrox.ripple.foreground;
+package concerrox.ui.foreground;
 
 import android.content.Context;
 import android.content.res.ColorStateList;

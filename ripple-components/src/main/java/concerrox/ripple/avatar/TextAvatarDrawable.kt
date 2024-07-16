@@ -8,7 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import com.google.android.material.internal.TextDrawableHelper
 import concerrox.ripple.internal.dp
 
-
+@Deprecated("")
 @SuppressLint("RestrictedApi")
 class TextAvatarDrawable(private var text: String) : ColorDrawable(),
     TextDrawableHelper.TextDrawableDelegate {

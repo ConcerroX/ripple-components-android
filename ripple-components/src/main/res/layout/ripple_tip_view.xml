@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/outline_account_circle_24"
+        app:layout_constraintRight_toLeftOf="@id/title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Information"
+        android:textAppearance="?textAppearanceSubtitle2"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintLeft_toRightOf="@id/icon"
+        app:layout_constraintTop_toTopOf="@id/icon" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Hello, world! "
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+</merge>

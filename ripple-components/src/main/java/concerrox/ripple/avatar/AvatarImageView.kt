@@ -13,6 +13,7 @@ import concerrox.ripple.drawable.LayerDrawableCompat
 import concerrox.ripple.internal.ResourcesUtils
 import concerrox.ripple.internal.dp
 
+@Deprecated("")
 class AvatarImageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,

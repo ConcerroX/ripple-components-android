@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.TypedValue
 import com.google.android.material.shape.ShapeAppearanceModel
 
+@Deprecated("")
 object ResourcesUtils {
     fun getResourceId(context: Context, defResAttr: Int): Int {
         val themedValue = TypedValue()

@@ -1,10 +1,8 @@
 package concerrox.ripple.internal
 
 import android.app.Activity
-import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
-import java.security.AccessController.getContext
 
 internal val View.activity: Activity?
     get() = run {
