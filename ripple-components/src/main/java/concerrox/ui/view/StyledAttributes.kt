@@ -53,11 +53,15 @@ class StyledAttributes(
         return if (typedArray.hasValue(attr)) typedArray.getBoolean(attr, true) else null
     }
 
-    fun getDimensionPixelSize(@StyleableRes attr: Int): Int {
+    fun getDimensionPixelSize(@StyleableRes attr: Int): Int? {
+        return if (typedArray.hasValue(attr)) typedArray.getDimensionPixelSize(attr, 0) else null
+    }
+
+    fun getDimensionPixelSizeOrThrow(@StyleableRes attr: Int): Int {
         if (!typedArray.hasValue(attr)) {
             throw IllegalArgumentException("Attribute $attr not defined in set.")
         }
-        return typedArray.getDimensionPixelSizeOrThrow(attr)
+        return typedArray.getDimensionPixelSize(attr, 0)
     }
 
     fun getColorStateList(@StyleableRes attr: Int): ColorStateList {

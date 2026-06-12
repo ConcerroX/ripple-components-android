@@ -25,6 +25,7 @@ import concerrox.ripple.internal.xInWindow
 import concerrox.ripple.R
 import concerrox.ripple.drawable.BoundedDrawable
 import concerrox.ripple.internal.ResourcesUtils
+import concerrox.ui.view.dp2px
 import kotlin.math.roundToInt
 
 @SuppressLint("ResourceType")
@@ -68,7 +69,9 @@ class SimpleMenuPopupWindow @JvmOverloads constructor(
         val typedArray = context.obtainStyledAttributes(
             attrs, R.styleable.SimpleMenuPopupWindow, defStyleAttr, defStyleRes
         )
-        elevation = typedArray.getDimension(R.styleable.SimpleMenuPopupWindow_menuElevation, 4f)
+        elevation = typedArray.getDimension(R.styleable.SimpleMenuPopupWindow_menuElevation,
+            dp2px(context, 4f).toFloat()
+        )
         horizontalMargin =
             typedArray.getDimension(R.styleable.SimpleMenuPopupWindow_listMarginHorizontal, 0f)
                 .toInt()
@@ -173,6 +176,7 @@ class SimpleMenuPopupWindow @JvmOverloads constructor(
         background.drawableBounds = zeroRect
         contentView.invalidateOutline()
         showPopupMenu(anchor, container, mMeasuredWidth, extraMargin)
+
 //            if (SimpleMenuPreference.isLightFixEnabled()) {
 //                mList.post {
 //                    Light.resetLightCenterForPopupWindow(

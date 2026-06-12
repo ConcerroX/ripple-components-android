@@ -137,4 +137,40 @@
     <declare-styleable name="ListItemControl">
         <attr name="layout_slot" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="Preference">
+        <attr name="android:paddingStart" />
+        <attr name="android:paddingEnd" />
+        <attr name="elevation" />
+        <attr name="background" />
+        <attr name="shapeAppearance" />
+
+        <attr name="forceKeyline" />
+        <attr name="keyline" />
+
+        <attr name="title" />
+        <attr name="text" />
+        <attr name="meta" />
+        <attr name="overline" />
+
+        <attr name="overlineTextAppearance" />
+        <attr name="primaryTextAppearance" />
+        <attr name="secondaryTextAppearance" />
+
+        <attr name="oneLineItemHeight" />
+
+        <attr name="twoLineItemHeight" />
+        <attr name="twoLineOverlineTextBaselineToTopHeight" />
+        <attr name="twoLinePrimaryTextBaselineToTopHeight" />
+        <attr name="twoLinePrimaryTextBaselineToOverlineTextBaselineHeight" />
+        <attr name="twoLineSecondaryTextBaselineToPrimaryTextBaselineHeight" />
+        <attr name="twoLineCenterAligned" />
+
+        <attr name="threeLineItemHeight" />
+        <attr name="threeLineOverlineTextBaselineToTopHeight"/>
+        <attr name="threeLinePrimaryTextBaselineToTopHeight" />
+        <attr name="threeLinePrimaryTextBaselineToOverlineTextBaselineHeight" />
+        <attr name="threeLineSecondaryTextBaselineToPrimaryTextBaselineHeight" />
+        <attr name="threeLineCenterAligned" />
+    </declare-styleable>
 </resources>

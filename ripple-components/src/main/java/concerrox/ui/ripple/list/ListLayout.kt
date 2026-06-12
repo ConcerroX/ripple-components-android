@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.LinearLayoutCompat
 import concerrox.ui.ripple.list.item.ListItem
 
-class ListLayout @JvmOverloads constructor(
+open class ListLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,

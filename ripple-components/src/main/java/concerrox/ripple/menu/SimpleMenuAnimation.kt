@@ -105,6 +105,7 @@ internal object SimpleMenuAnimation {
         return animator
     }
 
+    @Deprecated("")
     private fun createElevationAnimator(view: View, elevation: Float): Animator {
         val animator: Animator = ObjectAnimator.ofObject(
             view, "translationX", FloatEvaluator() as TypeEvaluator<*>, -elevation, 0f

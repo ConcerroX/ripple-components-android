@@ -4,7 +4,7 @@
     <style name="Widget.Preference.SimpleMenuPreference.PopupMenu" parent="android:Widget">
         <item name="android:popupBackground">@drawable/simple_menu_background</item>
         <item name="listMarginHorizontal">@dimen/simple_menu_margin</item>
-        <item name="listMarginVertical">8dp</item>
+        <item name="listMarginVertical">16dp</item>
         <item name="listItemPadding">16dp</item>
         <item name="menuElevation">8dp</item>
 

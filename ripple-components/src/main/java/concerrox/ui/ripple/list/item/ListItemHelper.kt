@@ -38,38 +38,57 @@ class ListItemHelper @JvmOverloads constructor(
 
     init {
         StyledAttributes.resolve(
-            listItem.context, attrs, R.styleable.ListItem, defStyleAttr, defStyleRes
+            listItem.context, attrs, R.styleable.Preference, defStyleAttr, defStyleRes
         ) {
             forceKeyline = getBoolean(R.styleable.ListItem_forceKeyline) == true
             keyline = getDimensionPixelSize(R.styleable.ListItem_keyline)
+                ?: getDimensionPixelSizeOrThrow(R.styleable.Preference_keyline)
             paddingStart = getDimensionPixelSize(R.styleable.ListItem_android_paddingStart)
+                ?: getDimensionPixelSizeOrThrow(R.styleable.Preference_android_paddingStart)
             paddingEnd = getDimensionPixelSize(R.styleable.ListItem_android_paddingEnd)
+                ?: getDimensionPixelSizeOrThrow(R.styleable.Preference_android_paddingEnd)
 
             twoLineOverlineTextBaselineToTopHeight = getDimensionPixelSize(
                 R.styleable.ListItem_twoLineOverlineTextBaselineToTopHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_twoLineOverlineTextBaselineToTopHeight
             )
             twoLinePrimaryTextBaselineToTopHeight = getDimensionPixelSize(
                 R.styleable.ListItem_twoLinePrimaryTextBaselineToTopHeight
+            )?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_threeLinePrimaryTextBaselineToTopHeight
             )
             twoLinePrimaryTextBaselineToOverlineTextBaselineHeight = getDimensionPixelSize(
                 R.styleable.ListItem_twoLinePrimaryTextBaselineToOverlineTextBaselineHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_twoLinePrimaryTextBaselineToOverlineTextBaselineHeight
             )
             twoLineSecondaryTextBaselineToPrimaryTextBaselineHeight = getDimensionPixelSize(
                 R.styleable.ListItem_twoLineSecondaryTextBaselineToPrimaryTextBaselineHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_twoLineSecondaryTextBaselineToPrimaryTextBaselineHeight
             )
             twoLineCenterAligned = getBoolean(R.styleable.ListItem_twoLineCenterAligned) == true
 
             threeLineOverlineTextBaselineToTopHeight = getDimensionPixelSize(
                 R.styleable.ListItem_threeLineOverlineTextBaselineToTopHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_threeLineOverlineTextBaselineToTopHeight
             )
             threeLinePrimaryTextBaselineToTopHeight = getDimensionPixelSize(
                 R.styleable.ListItem_threeLinePrimaryTextBaselineToTopHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_threeLinePrimaryTextBaselineToTopHeight
             )
             threeLinePrimaryTextBaselineToOverlineTextBaselineHeight = getDimensionPixelSize(
                 R.styleable.ListItem_threeLinePrimaryTextBaselineToOverlineTextBaselineHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_threeLinePrimaryTextBaselineToOverlineTextBaselineHeight
             )
             threeLineSecondaryTextBaselineToPrimaryTextBaselineHeight = getDimensionPixelSize(
                 R.styleable.ListItem_threeLineSecondaryTextBaselineToPrimaryTextBaselineHeight
+            ) ?: getDimensionPixelSizeOrThrow(
+                R.styleable.Preference_threeLineSecondaryTextBaselineToPrimaryTextBaselineHeight
             )
             threeLineCenterAligned = getBoolean(R.styleable.ListItem_threeLineCenterAligned) == true
         }

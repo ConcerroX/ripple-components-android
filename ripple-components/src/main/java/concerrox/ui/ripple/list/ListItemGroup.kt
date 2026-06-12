@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.LinearLayoutCompat
 import concerrox.ui.ripple.list.item.ListItem
 
-class ListItemGroup @JvmOverloads constructor(
+open class ListItemGroup @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
